@@ -1,12 +1,34 @@
+.footer_foot {
+    text-align: center;
+}
+
+.footer_left {
+    text-align: center;
+}
+
+.footer_left ul {
+    list-style: none;
+}
+
+.footer_left ul li {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.footer_left ul li:hover {
+    padding-left: 20px;
+    color: #01282a;
+    font-size: 20px;
+}
 .footer_foot h5 {
     color: #454343;
 }
 
-
 .content {
     margin-top: -11%;
 }
-
 
 .social {
     display: flex;
@@ -27,4 +49,9 @@
 .social div a img:hover {
     width: 50px;
     height: 50px;
+}
+
+.logo_div {
+    margin-top: -8%;
+    margin-left: 2%;
 }
