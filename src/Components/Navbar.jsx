@@ -1,7 +1,11 @@
 import React from "react";
 import "./Navbar.css";
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
+import User from "./User";
 
 const Navbar = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
   return (
     <div>
       <nav class="navbar navbar-expand-lg bg-light">
@@ -61,19 +65,19 @@ const Navbar = () => {
               </li>
             </ul>
             <div class="d-flex">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href=".signIn">
-                    SignIn
-                  </a>
-                </li>
+              {user ? (
+                <User name={user.firstName} />
+              ) : (
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item" style={{ marginRight: "5px" }}>
+                    <SignIn />
+                  </li>
 
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href=".signUp">
-                    SignUp
-                  </a>
-                </li>
-              </ul>
+                  <li class="nav-item">
+                    <SignUp />
+                  </li>
+                </ul>
+              )}
             </div>
           </div>
         </div>
