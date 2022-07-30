@@ -66,7 +66,7 @@ const Navbar = () => {
             </ul>
             <div class="d-flex">
               {user ? (
-                <User name={user.firstName} />
+                <User name={user.firstName || user.name} />
               ) : (
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item" style={{ marginRight: "5px" }}>

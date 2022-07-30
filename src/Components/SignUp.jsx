@@ -60,7 +60,6 @@ export default function SignUp() {
       alert("All fields are required.");
     }
   };
-  console.log(form);
   const { firstName, lastName, email, password } = form;
   return (
     <div>
@@ -125,7 +124,9 @@ export default function SignUp() {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleSignup}>Sign Up</Button>
+          <Button onClick={handleSignup} style={{ borderColor: "#03989E" }}>
+            Sign Up
+          </Button>
         </DialogActions>
       </Dialog>
     </div>

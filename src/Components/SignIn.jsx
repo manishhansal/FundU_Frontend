@@ -5,6 +5,7 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
+import { GoogleLogin } from "react-google-login";
 
 export default function SignIn() {
   const [open, setOpen] = React.useState(false);
@@ -48,6 +49,8 @@ export default function SignIn() {
             alert("Login successfully..");
             localStorage.setItem("user", JSON.stringify(response));
             window.location.reload();
+          } else {
+            alert("Invalid User.");
           }
         })
         .catch((err) => console.log(err));
@@ -55,16 +58,39 @@ export default function SignIn() {
       alert("Email and Password are required.");
     }
   };
-  console.log(form);
+  const responseGoogle = (response) => {
+    let data = {
+      name: response.profileObj.name,
+      email: response.profileObj.email,
+    };
+
+    if (data) {
+      alert("Login successfully..");
+      localStorage.setItem("user", JSON.stringify(data));
+      window.location.reload();
+    } else {
+      alert("Login failed.");
+    }
+  };
   const { email, password } = form;
   return (
     <div>
       <Button variant="outlined" onClick={handleClickOpen}>
         Sign In
       </Button>
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog open={open} onClose={handleClose} style={{ textAlign: "center" }}>
         <DialogTitle>Get Started</DialogTitle>
         <DialogContent style={{ textAlign: "center" }}>
+          <div style={{ marginBottom: "5px" }}>
+            <GoogleLogin
+              clientId="810793553100-aaeeva1kduams4r56fbo0vdu3d9d735f.apps.googleusercontent.com"
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
+              cookiePolicy={"single_host_origin"}
+            />
+          </div>
+          <br />
+          OR
           <TextField
             autoFocus
             margin="dense"
@@ -102,7 +128,9 @@ export default function SignIn() {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleSignin}>Sign In</Button>
+          <Button onClick={handleSignin} style={{ borderColor: "#03989E" }}>
+            Sign In
+          </Button>
         </DialogActions>
       </Dialog>
     </div>
