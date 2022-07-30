@@ -37,7 +37,7 @@ const Navbar = () => {
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href=".about">
+                <a class="nav-link active" aria-current="page" href="#about">
                   About
                 </a>
               </li>
@@ -59,7 +59,7 @@ const Navbar = () => {
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href=".contact">
+                <a class="nav-link active" aria-current="page" href="#contact">
                   Contact
                 </a>
               </li>
