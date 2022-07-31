@@ -1,5 +1,6 @@
 .footer_foot {
     text-align: center;
+    font-family: 'Baloo Bhaijaan 2', cursive;
 }
 
 .footer_left {
@@ -8,6 +9,7 @@
 
 .footer_left ul {
     list-style: none;
+    font-family: 'Baloo Bhaijaan 2', cursive;
 }
 
 .footer_left ul li {
