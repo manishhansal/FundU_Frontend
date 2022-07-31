@@ -4,15 +4,6 @@ import "./About.css";
 const About = () => {
   return (
     <div id="about">
-      <div className="about_container">
-        <img
-          src="https://i.ibb.co/tYtFnGJ/about-background.jpg"
-          alt="about-background"
-        />
-        <div className="content">
-          <h2>Learn Stock Market By Playing Games</h2>
-        </div>
-      </div>
       <div className="content2">
         <h1>About Us</h1>
         <h2>An early stage SaaS startup</h2>

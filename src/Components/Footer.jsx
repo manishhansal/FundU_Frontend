@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="footer_left">
           <ul class="me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href=".home">
+              <a class="nav-link active" aria-current="page" href="/">
                 Home
               </a>
             </li>
@@ -28,7 +28,7 @@ const Footer = () => {
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href=".services">
+              <a class="nav-link active" aria-current="page" href="#services">
                 Services
               </a>
             </li>
@@ -37,7 +37,7 @@ const Footer = () => {
               <a
                 class="nav-link active"
                 aria-current="page"
-                href=".gamingPlatform"
+                href="#gamingPlatform"
               >
                 Gaming Platform
               </a>
