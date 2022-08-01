@@ -3,6 +3,7 @@ import About from "./Components/About";
 import Carousel from "./Components/Carousel";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import GamingPlatform from "./Components/GamingPlatform";
 import Navbar from "./Components/Navbar";
 import Services from "./Components/Services";
 
@@ -12,7 +13,8 @@ function App() {
       <Navbar />
       <Carousel />
       <About />
-      <Services/>
+      <Services />
+      <GamingPlatform/>
       <Contact />
       <Footer />
     </div>

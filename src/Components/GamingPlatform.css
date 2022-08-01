@@ -1,0 +1,44 @@
+.gamingPlatform_main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-around;
+    gap: 20px
+}
+
+.gamingPlatform_child {
+    width: 300px;
+    height: 400px;
+    position: relative;
+}
+
+.gamingPlatform_child img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+#gamingPlatform {
+    text-align: center;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+
+.gamingPlatform_child button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: all .3s;
+}
+
+.gamingPlatform_child button:hover {
+    font-size: 20px;
+    background-color: #03989E;
+    border: 2px solid #03989E;
+}
