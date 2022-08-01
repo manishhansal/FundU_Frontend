@@ -13,7 +13,7 @@ const Navbar = () => {
           <a class="navbar-brand" href="/">
             <img
               className="logo"
-              src="http://fundu.games/images/logo/fundu_logo_t_c.png"
+              src="fundu-logo.png"
               alt="logo"
             />
           </a>
