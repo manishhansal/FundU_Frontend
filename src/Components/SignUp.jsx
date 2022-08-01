@@ -40,7 +40,7 @@ export default function SignUp() {
     ) {
       const payloadjson = JSON.stringify(form);
 
-      fetch(`http://localhost:9111/signUp`, {
+      fetch(`https://fundu.herokuapp.com/signUp`, {
         method: "POST",
         body: payloadjson,
         headers: {

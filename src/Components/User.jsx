@@ -38,9 +38,13 @@ export default function User({ name }) {
         <ListItemButton>
           <ListItemText
             primary="Sign Out"
-            style={{ textAlign: "center","border": "1px solid #81CBCE","backgroundColor":"#81CBCE", "borderRadius":"5px" }}
-                      onClick={handleSignout}
-                      
+            style={{
+              textAlign: "center",
+              border: "1px solid #81CBCE",
+              backgroundColor: "#81CBCE",
+              borderRadius: "5px",
+            }}
+            onClick={handleSignout}
           />
         </ListItemButton>
       </List>
@@ -50,7 +54,12 @@ export default function User({ name }) {
   return (
     <div>
       <React.Fragment>
-        <Button onClick={toggleDrawer("right", true)} style={{"color": "#03989E", "fontFamily": "Baloo Bhaijaan 2"}}>Hi! {name}</Button>
+        <Button
+          onClick={toggleDrawer("right", true)}
+          style={{ color: "#03989E", fontFamily: "Baloo Bhaijaan 2" }}
+        >
+          Hi! {name}
+        </Button>
         <SwipeableDrawer
           anchor="right"
           open={state["right"]}
