@@ -59,6 +59,7 @@ export default function SignIn() {
     }
   };
   const responseGoogle = (response) => {
+    console.log(response)
     let data = {
       name: response.profileObj.name,
       email: response.profileObj.email,
